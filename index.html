@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetkaVPN - Платный доступ</title>
+    <style>
+        body { 
+            background-color: #0f172a; 
+            color: white; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
+            padding: 20px; 
+            box-sizing: border-box; 
+        }
+        .container { 
+            background-color: #1e293b; 
+            padding: 30px; 
+            border-radius: 20px; 
+            width: 100%; 
+            max-width: 400px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+            text-align: center; 
+        }
+        h1 { font-size: 26px; margin-bottom: 5px; color: #f8fafc; }
+        .desc { color: #94a3b8; font-size: 14px; margin-bottom: 25px; line-height: 1.5; }
+        .section-title { font-size: 11px; text-transform: uppercase; color: #64748b; letter-spacing: 1px; margin: 25px 0 10px 0; text-align: left; font-weight: bold; }
+        .btn { 
+            display: block; 
+            width: 100%; 
+            padding: 14px; 
+            margin-bottom: 12px; 
+            border-radius: 12px; 
+            font-weight: bold; 
+            font-size: 15px; 
+            text-decoration: none; 
+            border: none; 
+            cursor: pointer; 
+            transition: 0.2s; 
+            box-sizing: border-box; 
+            text-align: center; 
+        }
+        .btn-primary { background-color: #3b82f6; color: white; }
+        .btn-primary:hover { background-color: #2563eb; }
+        .btn-outline { background-color: transparent; color: #3b82f6; border: 2px solid #3b82f6; }
+        .btn-outline:hover { background-color: rgba(59, 130, 246, 0.1); }
+        .btn-accent { background-color: #10b981; color: white; }
+        .btn-accent:hover { background-color: #059669; }
+        .badge { background-color: #ef4444; color: white; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: bold; display: inline-block; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="badge">Платный Доступ</div>
+        <h1>NetkaVPN</h1>
+        <div class="desc">Платная версия VPN-подписки NetkaVPN.</div>
+
+        <div class="section-title">📥 Добавить подписку</div>
+        <button onclick="copySubUrl()" class="btn btn-primary">📋 Скопировать ссылку подписки</button>
+        
+        <div class="section-title">ℹ️ Инструкция</div>
+        <div style="text-align: left; font-size: 13px; color: #94a3b8; line-height: 1.6;">
+            1. Скопируйте ссылку<br>
+            2. Откройте Happ/v2rayNG<br>
+            3. Нажмите "+" → "Подписка"<br>
+            4. Вставьте ссылку
+        </div>
+    </div>
+
+    <script>
+        // ВАЖНО: Замени на свой RAW URL!
+        const subUrl = "https://raw.githubusercontent.com/frozy/NetkaVPN/main/sub.txt";
+
+        function copySubUrl() {
+            navigator.clipboard.writeText(subUrl);
+            alert("✅ Ссылка скопирована!\n\nВставьте её в Happ в раздел 'Подписки'");
+        }
+    </script>
+
+</body>
+</html>
