@@ -2,6 +2,7 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=2097792000
 #announce: ℹ️ Платная версия VPN-подписки NetkaVPN  |  ⚡ Безлимит  |  🗄️ Выберите сервер ↓
 #profile-update-interval: 1
+#hide-settings: 1
 #profile-web-page-url: https://frozy.github.io/NetkaVPN/
 #support-url: https://t.me/NetkaVPN
 #
